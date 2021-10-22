@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc67fa4677.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="top">
+        <img src="img/YOGO.png" alt="">
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">pricing</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="">contact us</a></li>
+            </ul>
+        </nav>
+        <div class="icon-bar" id="bar">
+            <a href="javascript:void(0);" onclick="hideshow()"> <i class="fas fa-bars"></i></a>
+
+        </div>
+    </header>
+
+    <!-- ------------icon bar--------------- -->
+
+    <div id="icon-bar">
+        <a href=""><i class="fas fa-home"></i></a>
+        <a href=""><i class="fas fa-search"></i></a>
+        <a href=""><i class="fas fa-envelope"></i></a>
+        <a href=""><i class="fas fa-globe"></i></a>
+        <a href=""><i class="fas fa-trash"></i></a>
+    </div>
+
+
+    <!-- ------------accordian--------------- -->
+    <div class="acc">section 1 </div>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptates? Et dolorum mollitia unde. Harum
+            eligendi quae, omnis expedita adipisci consequatur provident quia tempora, ab nesciunt neque, dolores
+            architecto cumque?</p>
+    </div>
+    <div class="acc">section 2 </div>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptates? Et dolorum mollitia unde. Harum
+            eligendi quae, omnis expedita adipisci consequatur provident quia tempora, ab nesciunt neque, dolores
+            architecto cumque?</p>
+    </div>
+    <div class="acc">section 3 </div>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptates? Et dolorum mollitia unde. Harum
+            eligendi quae, omnis expedita adipisci consequatur provident quia tempora, ab nesciunt neque, dolores
+            architecto cumque?</p>
+    </div>
+
+    <!-- ---------------------------------tab---------- -->
+    <div id="top-bar">
+        <a href="javascript:void(0);" onclick="fun(event,'home')" class="head"> Home </a>
+        <a href="" onclick="fun(event,'gallery')" class="head">Gallery</a>
+        <a href="" onclick="fun(event,'service')" class="head">Service</a>
+    </div>
+    <div class="content">
+        <div id="home" class="data">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, non soluta corrupti deserunt velit
+                magni quos eligendi illo repudiandae autem quisquam ipsum minus, modi quo iusto eum maxime? Voluptate,
+                harum.
+                quod reprehenderit?</p>
+        </div>
+        <div id="gallery" class="data">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, non soluta corrupti deserunt velit
+                magni quos eligendi illo repudiandae autem quisquam ipsum minus, modi quo iusto eum maxime? Voluptate,
+                harum.
+                quod reprehenderit?</p>
+        </div>
+        <div id="service" class="data">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, non soluta corrupti deserunt velit
+                magni quos eligendi illo repudiandae autem quisquam ipsum minus, modi quo iusto eum maxime? Voluptate,
+                harum.
+                quod reprehenderit?</p>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="py-2  bg-light border-bottom">
+            <div class="container d-flex flex-wrap">
+                <ul class="nav me-auto">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">About</a></li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+
+
+        function fun(ev, name) {
+            var x = document.getElementsByClassName("data");
+            var i;
+            for (i = 0; i <= x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            var y = document.getElementsByClassName("head");
+            var i;
+            for (i = 0; i <= y.length; i++) {
+                document.getElementById(x[i]).style.display = "block";
+            }
+
+
+        }
+
+    </script>
+
+    <script>
+
+        function hideshow() {
+            var x = document.getElementById('menu');
+
+            if (x.style.maxHeight) {
+                x.style.maxHeight = null;
+            }
+            else {
+                x.style.maxHeight = x.scrollHeight + "px";
+            }
+            //         if (x.className === "menu") 
+            //         {
+            //     x.className = "res-menu";
+            //   } 
+            //   else 
+            //   {
+            //     x.className = "menu";
+            //   }
+        }
+
+
+    </script>
+    <script>
+        var x = document.getElementsByClassName("acc");
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].addEventListener("click", function () {
+                this.classList.toggle("active")
+                var pl = this.nextElementSibling;
+                if (pl.style.maxHeight) {
+                    pl.style.maxHeight = null;
+                }
+                else {
+                    pl.style.maxHeight = pl.scrollHeight + "px";
+                }
+            }
+            );
+        }
+
+    </script>
+
+</body>
+
+</html>

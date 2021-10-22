@@ -1,0 +1,181 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header{
+    background-color:indigo;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    overflow:visible;
+   
+   
+}
+header img{
+    width: 150px;
+    cursor: pointer;
+}
+ul
+{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+ul li a
+{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 2s;
+   
+}
+ul li a:hover
+{
+    border-bottom: 4px solid indigo;
+    color: indigo;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.icon-bar
+{
+   
+    display: none;
+    cursor: pointer;
+}
+
+
+@media (max-width:800px)
+{
+    header
+    {
+        position: relative;
+        display: block;
+        padding-left: 20px;
+    }
+   
+    .icon-bar
+{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: block;
+    padding: 10px;
+    color: white;
+   
+}
+
+.menu
+{
+    /* display: none; */
+    max-height: 0;
+    transition: max-height .4s ease-out;
+}
+/* .res-menu
+{
+    display: block;
+
+} */
+
+ul li{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
+}
+
+/* -----------------icon-bar----------- */
+#icon-bar
+{
+    max-width: 50%;
+    
+    background-color: thistle;
+    margin: 50px auto;
+    overflow: hidden;
+}
+#icon-bar a
+{
+    padding: 20px;
+    font-size: 40px;
+   
+    cursor: pointer;
+
+}
+#icon-bar a:hover
+{
+    background-color: violet;  
+}
+
+@media(max-width:700px)
+{
+    #icon-bar a
+    {
+        display: block;
+    }  
+}
+
+
+/* --------------------------accordian------------- */
+.acc
+{
+    padding: 20px;
+    background-color: lightslategrey;
+    text-align: left;
+    font-size: 20px;
+    cursor: pointer;
+    /* transition: all .2s; */
+}
+.acc:hover, .active
+{
+    background-color: mediumorchid !important;
+}
+.panel
+{
+    background-color: lightyellow;
+    /* padding: 20px; */
+    margin: 20px;
+    font-size: 14px;
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-out;
+}
+/* -------------------tab---------------- */
+#top-bar
+{
+    width:80%;
+    margin:20px auto;
+    padding: 20px 0px;
+    background-color: peachpuff;
+    overflow: hidden;
+}
+#top-bar a{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 26px;
+    text-decoration: none;
+    /* border: 2px solid rosybrown; */
+}
+#top-bar a:hover{
+    background-color: plum;
+}
+.content div
+{
+    width: 80%;
+    background-color: silver;
+    padding: 20px;
+    margin: auto;
+    display: none;
+}
+.content div p{
+    font-size: 14px;
+    color: black;
+}
